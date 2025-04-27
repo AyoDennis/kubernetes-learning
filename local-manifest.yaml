@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ayodeji-locally-sourced
+  labels:
+    name: label-name d
+

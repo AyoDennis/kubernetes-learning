@@ -4,4 +4,8 @@ metadata:
   name: ayodeji-locally-sourced
   labels:
     name: label-name d
-
+spec:
+  containers:
+  - name: myapp
+    image: deji_image
+    imagePullPolicy: Never

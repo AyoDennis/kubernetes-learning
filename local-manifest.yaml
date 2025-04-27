@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: ayodeji-locally-sourced
   labels:
-    name: label-name d
+    type: front-end
 spec:
   containers:
   - name: myapp

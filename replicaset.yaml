@@ -14,9 +14,9 @@ spec:
     metadata:
       name: ayo-pod
       labels:
-        name: front-end
+        type: front-end
     spec:
       containers:
         - name: myapp
-          image: deji-image
+          image: deji_image
           imagePullPolicy: Never

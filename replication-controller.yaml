@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: my-app-rc
+  labels:
+    app: this-app
+    type: front-end
+spec:
+  template:
+
+    metadata:
+      name: deji-pod-inside
+      labels:
+        name: prod
+        type: front-end
+    spec:
+      containers:
+        - name: deji
+          image: deji_image
+          imagePullPolicy: Never
+  replicas: 2

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapp
+    type: front-end
+spec: 
+  template:
+    metadata:
+      creationTimestamp: "2025-04-18T22:52:20Z"
+      labels:
+        type: front-end
+      name: bolu-pod
+      namespace: default
+      resourceVersion: "5103"
+      uid: 46698637-c47e-468a-87f1-e1aff1e0e0a2
+    spec:
+      containers:
+      - image: redis
+        imagePullPolicy: Always
+        name: bolu-pod
+
+  replicas: 4
+  selector: 
+    matchLabels: 
+      type: front-end
+

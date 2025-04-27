@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: ayodeji-rs
+  labels: 
+    app: my-app
+    type: front-end
+spec:
+  selector: 
+    matchLabels:
+      type: front-end
+  replicas: 3
+  template: 
+    metadata:
+      name: ayo-pod
+      labels:
+        name: front-end
+    spec:
+      containers:
+        - name: myapp
+          image: deji-image
+          imagePullPolicy: Never

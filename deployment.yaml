@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ayodeji-rs
+  labels: 
+    app: my-app
+    type: fronting
+spec:
+  selector: 
+    matchLabels:
+      type: front-end
+  replicas: 3
+  template: 
+    metadata:
+      name: ayo-pod
+      labels:
+        type: front-end
+    spec:
+      containers:
+        - name: myapp
+          image: deji_image
+          imagePullPolicy: Never

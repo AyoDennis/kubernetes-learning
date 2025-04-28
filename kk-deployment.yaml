@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ayodeji-deployment
+  name: kk-deployment
   labels: 
     app: my-app
     type: fronting
@@ -9,7 +9,7 @@ spec:
   selector: 
     matchLabels:
       type: front-end
-  replicas: 6
+  replicas: 3
   template: 
     metadata:
       name: ayo-pod
@@ -18,5 +18,5 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: deji_image
-          imagePullPolicy: Never
+          image: nginx:1.18-perl 
+          imagePullPolicy: IfNotPresent

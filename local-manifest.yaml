@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: myapp
-    image: deji_image
+    image: deji_image:env
     imagePullPolicy: Never
     env:
       - name: FIRST_NAME

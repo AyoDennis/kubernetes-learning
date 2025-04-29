@@ -4,3 +4,8 @@ metadata:
   name: ayodeji-locally-sourced
   labels:
     type: front-end
+spec:
+  containers:
+  - name: myapp
+    image: deji_image
+    imagePullPolicy: Never

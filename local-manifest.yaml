@@ -9,3 +9,14 @@ spec:
   - name: myapp
     image: deji_image
     imagePullPolicy: Never
+    env:
+    - name: FIRST_NAME
+        valueFrom:
+          secretKeyRef:
+            name: ayo-secret-test
+            key: first_name
+      - name: LAST_NAME
+        valueFrom:
+          secretKeyRef:
+            name: ayo-secret-test
+            key: last_name

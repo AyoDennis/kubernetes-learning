@@ -4,5 +4,8 @@ import os
 # time.sleep(20000)
 
 
-dej_a = os.environ["ACCESS_KEY"]
-print(dej_a)
+name1 = os.environ.get("FIRST_NAME")
+print(name1)
+
+name2 = os.environ.get("LAST_NAME")
+print(name2)

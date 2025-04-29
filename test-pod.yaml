@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   creationTimestamp: "2025-04-29T12:20:48Z"
   labels:
-    run: test-pod
+    type: web-server
   name: test-pod
   namespace: default
   resourceVersion: "53437"

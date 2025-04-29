@@ -2,8 +2,6 @@ import time
 import os
 
 
-
-
 name1 = os.environ.get("FIRST_NAME")
 print(name1)
 

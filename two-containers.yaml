@@ -9,3 +9,5 @@ spec:
   - name: myapp
     image: deji_image
     imagePullPolicy: Never
+  - name: redis-container
+    image: redis

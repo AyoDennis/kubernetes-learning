@@ -12,11 +12,22 @@ spec:
   replicas: 6
   template: 
     metadata:
-      name: ayo-pod
+      name: ayodeji-locally-sourced
       labels:
         type: front-end
     spec:
       containers:
-        - name: myapp
-          image: deji_image:env
-          imagePullPolicy: Never
+      - name: myapp
+        image: deji_image:env
+        imagePullPolicy: Never
+        env:
+          - name: FIRST_NAME
+            valueFrom:
+              secretKeyRef:
+                name: ayo-secret-test
+                key: first_name
+          - name: LAST_NAME
+            valueFrom:
+              secretKeyRef:
+                name: ayo-secret-test
+                key: last_name

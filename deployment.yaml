@@ -24,10 +24,10 @@ spec:
           - name: FIRST_NAME
             valueFrom:
               secretKeyRef:
-                name: ayo-secret-test
+                name: final-secret
                 key: first_name
           - name: LAST_NAME
             valueFrom:
               secretKeyRef:
-                name: ayo-secret-test
+                name: final-secret
                 key: last_name

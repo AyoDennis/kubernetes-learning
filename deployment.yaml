@@ -18,16 +18,21 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: deji_image:env
+        image: deji_image:env1
         imagePullPolicy: Never
         env:
           - name: FIRST_NAME
             valueFrom:
               secretKeyRef:
                 name: final-secret
-                key: first_name
+                key: FIRST_NAME
           - name: LAST_NAME
             valueFrom:
               secretKeyRef:
                 name: final-secret
-                key: last_name
+                key: LAST_NAME
+          - name: MIDDLE_NAME
+            valueFrom:
+              secretKeyRef:
+                name: final-secret
+                key: MIDDLE_NAME

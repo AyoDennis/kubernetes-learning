@@ -10,4 +10,4 @@ name3 = os.environ.get("MIDDLE_NAME")
 
 print(f"I am {name1} {name2} {name3}")
 
-time.sleep(20000)
+# time.sleep(20000)

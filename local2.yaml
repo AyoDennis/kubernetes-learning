@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ayodeji-locally-sourced
+  labels:
+    type: front-end
+spec:
+  containers:
+  - name: myapp
+    image: deji_image:env2
+    imagePullPolicy: Never
+    env:
+      - name: FIRST_NAME
+        valueFrom:
+          secretKeyRef:
+            name: final-secret
+            key: FIRST_NAME
+      - name: LAST_NAME
+        valueFrom:
+          secretKeyRef:
+            name: final-secret
+            key: LAST_NAME
+      - name: MIDDLE_NAME
+        valueFrom:
+          secretKeyRef:
+            name: final-secret
+            key: MIDDLE_NAME
+  restartPolicy: Never

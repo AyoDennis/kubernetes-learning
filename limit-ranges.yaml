@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: cpu-limiter
+spec:
+  limits:
+  - type: Container
+    min:
+      cpu: "50m"  # No container can request less than 50m CPU

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: low-cpu-pod
+spec:
+  containers:
+  - name: test-pod
+    image: deji_image:env1
+    resources:
+      requests:
+        cpu: "20m"  # Attempts to request 20m (violates LimitRange)

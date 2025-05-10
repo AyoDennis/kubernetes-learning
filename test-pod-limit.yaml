@@ -8,4 +8,4 @@ spec:
     image: deji_image:env1
     resources:
       requests:
-        cpu: "20m"  # Attempts to request 20m (violates LimitRange)
+        cpu: "50m"  # Attempts to request 20m (violates LimitRange)

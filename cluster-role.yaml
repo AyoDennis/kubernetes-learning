@@ -1,8 +1,8 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
+kind: ClusterRole
 metadata: 
- name: developer
+ name: cluster-administrator
 rules: 
 - apiGroups: [""]
-  resources: ["pods"]
-  verbs: ["list", "get", "create", "update", "delete"]
+  resources: ["nodes"]
+  verbs: ["list", "get", "create", "delete"]

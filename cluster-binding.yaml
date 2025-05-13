@@ -1,11 +1,12 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
-  name: devuser-developer-binding
+  name: cluster-admin-role-binding
 subjects:
 - kind: User
-  name: dev-user
+  name: cluster-admin
   apiGroup: rbac.authorization.k8s.io
 roleRef:
-  kind: Role
-  name: developer
+  kind: ClusterRole
+  name: cluster-administrator
+  apiGroup: rbac.authorizatiion.k8s.io
